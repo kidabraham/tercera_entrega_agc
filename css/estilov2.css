@@ -1,0 +1,478 @@
+@charset "UTF-8";
+/*------niveles-------*/
+/* se eliminan todos los padding y los margin que vienen por defecto y se resetean a 0 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/imghome.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  border: 1px solid rgb(255, 2, 2);
+  background-color: transparent;
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  transition: 0.5s;
+}
+.nav-links ul li:hover {
+  background-color: rgb(7, 7, 73);
+}
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: white;
+}
+
+.banner-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgb(255, 2, 2);
+  padding: 12px 34px;
+  font-size: 15px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.banner-btn:hover {
+  background: rgb(7, 7, 73);
+  transition: 1s;
+}
+
+nav .bi {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    height: 320px;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+  }
+  .nav-links ul {
+    padding: 40px;
+  }
+}
+/*------ niveles -------*/
+.niveles {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.fila {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-niveles {
+  flex-basis: 31%;
+  background: rgba(235, 235, 235, 0.932);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.col-niveles:hover {
+  box-shadow: 0 0 20px 0px rgba(5, 12, 40, 0.941);
+}
+
+@media (max-width: 700px) {
+  .fila {
+    flex-direction: column;
+  }
+}
+/*------instalaciones-------*/
+.instalaciones {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.ins-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ins-col img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 25px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0, 5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*------servicios-------*/
+.servicios {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.servicios-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.servicios-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.servicios-col p {
+  padding: 0;
+}
+.servicios-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/*------reseñas-------*/
+.opiniones {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.opiniones-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: rgba(235, 235, 235, 0.932);
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+.opiniones-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.opiniones-col p {
+  padding: 0;
+}
+.opiniones-col h3 {
+  margin-top: 15px;
+  text-align: left;
+}
+.opiniones-col .bi {
+  color: rgb(255, 166, 0);
+}
+
+/*------banner-------*/
+.banner {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/banner2.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.banner h1 {
+  color: white;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .banner h1 {
+    font-size: 24px;
+  }
+}
+/*------footer-------*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.iconos .bi {
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.bi-activity {
+  color: red;
+}
+
+/*------seccion conocenos-------*/
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/banner1.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.sub-header h1 {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.conocenos {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.conocenos-col {
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.conocenos-col img {
+  width: 100%;
+}
+.conocenos-col h1 {
+  padding-top: 0;
+}
+.conocenos-col p {
+  padding: 15px 0 25px;
+}
+
+.btn-rojo {
+  color: rgb(255, 2, 2);
+}
+
+.btn-rojo:hover {
+  color: white;
+}
+
+/*------seccion servicios-------*/
+.sub-header2 {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/banner2.png);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.sub-header2 h1 {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+/*------seccion niveles-------*/
+.sub-header3 {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/banner3.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.sub-header3 h1 {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.contenido-niveles {
+  width: 80%;
+  margin: auto;
+  padding: 60px;
+}
+
+.niveles-izq {
+  flex-basis: 65%;
+}
+.niveles-izq img {
+  width: 100%;
+}
+.niveles-izq h2 {
+  color: black;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.niveles-izq p {
+  color: #999;
+  padding: 0;
+}
+
+.niveles-der {
+  flex-basis: 32%;
+}
+.niveles-der h3 {
+  background: rgb(255, 2, 2);
+  color: white;
+  padding: 7px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.niveles-der div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.caja-comen {
+  border: 1px solid #ccc;
+  margin: 50px 0;
+  padding: 10px 20px;
+}
+.caja-comen h3 {
+  text-align: left;
+}
+
+.form-comen input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+}
+.form-comen textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+}
+.form-comen button {
+  margin: 10px 0;
+}
+
+/*------seccion contacto-------*/
+.sub-header4 {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 12, 40, 0.941), rgba(55, 7, 7, 0.766)), url(../img/banner4.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.sub-header4 h1 {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+/*# sourceMappingURL=estilov2.css.map */
